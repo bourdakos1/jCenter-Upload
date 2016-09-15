@@ -126,10 +126,19 @@ bintray {
             desc = libraryDescription
             gpg {
                 sign = false //Determines whether to GPG sign the files. The default is false
-//                passphrase = properties.getProperty("bintray.gpg.password")
+                //passphrase = properties.getProperty("bintray.gpg.password")
                 //Optional. The passphrase for GPG signing'
             }
         }
     }
 }
 ```
+
+Finally, in local.properties add the following:
+(replace "yourbintrayusername" and "yourbintrayapikey" with your actual info)
+```groovy
+bintray.user=yourbintrayusername
+bintray.apikey=yourbintrayapikey
+```
+
+To start the upload all you need to do is run ```./gradlew bintrayUpload``` in your projects terminal
