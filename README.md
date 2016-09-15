@@ -13,3 +13,32 @@ dependencies {
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
 }
 ```
+
+In your Library's Module build.gradle add the following code at the top under ``apply plugin: 'com.android.library'``:
+(Fill in required information in quotes)
+
+```groovy
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = ''
+
+    publishedGroupId = ''
+    libraryName = ''
+    artifact = ''
+
+    libraryDescription = ''
+
+    siteUrl = ''
+    gitUrl = ''
+
+    libraryVersion = ''
+
+    developerId = ''
+    developerName = ''
+    developerEmail = ''
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+```
