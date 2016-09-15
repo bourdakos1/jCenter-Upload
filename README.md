@@ -5,9 +5,11 @@ Step-by-step instructions for uploading to jCenter
 https://bintray.com/bintray/jcenter
 
 ## Gradle
-In your Projects build.gradle make sure you have the following dependencies:
-``dependencies {
+In your Project's build.gradle make sure you have the following dependencies:
+```groovy
+dependencies {
         classpath 'com.android.tools.build:gradle:2.1.2'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.4'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
-    }``
+}
+```
