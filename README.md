@@ -15,7 +15,6 @@ dependencies {
 ```
 
 In your Project's gradle.properties add the following:
-
 ```properties
 bintray.bintrayRepo=maven
 bintray.bintrayName=android-text-manager
@@ -48,9 +47,10 @@ apply from: 'https://raw.githubusercontent.com/bourdakos1/jCenter-Upload/master/
 
 Finally, in local.properties add the following:
 
-```groovy
+```properties
 bintray.user=yourbintrayusername
 bintray.apikey=yourbintrayapikey
 ```
 
-To start the upload do a gradle synce and run ```./gradlew bintrayUpload``` in your projects terminal
+## Upload
+Run ```./gradlew bintrayUpload``` in your projects terminal
