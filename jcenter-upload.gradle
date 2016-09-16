@@ -42,7 +42,7 @@ install {
 
 apply plugin: 'com.jfrog.bintray'
 
-version = libraryVersion
+version = projectProperties.getProperty("bintray.libraryVersion")
 
 if (project.hasProperty("android")) { // Android libraries
     task sourcesJar(type: Jar) {
