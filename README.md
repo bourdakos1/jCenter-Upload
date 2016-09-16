@@ -5,6 +5,8 @@ Step-by-step instructions for uploading to jCenter
 https://bintray.com
 
 ## Gradle
+![](gradle_help.png)
+
 In your Project's build.gradle make sure you have the following dependencies:
 ```groovy
 dependencies {
