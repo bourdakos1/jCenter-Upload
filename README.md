@@ -14,7 +14,7 @@ dependencies {
 }
 ```
 
-In the next step you will need to provide some information about your library. Some of this information includes your ``GroupId`` your ``artifact`` and your ``libraryVersion`` this is in regards to how users will add your library to their project and will look like what follows:
+In the next step you will need to provide some information about your library. Some of this information includes your ``GroupId`` your ``artifact`` and your ``libraryVersion`` they can be whatever you like, but normally look something like this:
 ```groovy
 dependencies {
         compile 'publishedGroupId:artifact:libraryVersion'
