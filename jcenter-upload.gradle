@@ -93,8 +93,8 @@ bintray {
             desc = projectProperties.getProperty("bintray.libraryDescription")
             gpg {
                 sign = false //Determines whether to GPG sign the files. The default is false
-                //passphrase = properties.getProperty("bintray.gpg.password")
                 //Optional. The passphrase for GPG signing'
+                //passphrase = properties.getProperty("bintray.gpg.password")
             }
         }
     }
