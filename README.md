@@ -2,7 +2,7 @@
 Step-by-step instructions for uploading to jCenter
 
 ## Create a jCenter account
-https://bintray.com/bintray/jcenter
+https://bintray.com
 
 ## Gradle
 In your Project's build.gradle make sure you have the following dependencies:
@@ -14,131 +14,43 @@ dependencies {
 }
 ```
 
-In your Library's Module build.gradle add the following code at the top under ``apply plugin: 'com.android.library'``:
-(Fill in required information in quotes)
+In your Project's gradle.properties add the following:
 
 ```groovy
-ext {
-    bintrayRepo = 'maven'
-    bintrayName = ''
+bintray.bintrayRepo=maven
+bintray.bintrayName=android-text-manager
 
-    publishedGroupId = ''
-    libraryName = ''
-    artifact = ''
+bintray.publishedGroupId=com.xlythe
+bintray.libraryName=AndroidTextManager
+bintray.artifact=android-text-manager
 
-    libraryDescription = ''
+bintray.libraryDescription=''
 
-    siteUrl = ''
-    gitUrl = ''
+bintray.siteUrl=https://github.com/Xlythe/AndroidTextManager
+bintray.gitUrl=https://github.com/Xlythe/AndroidTextManager.git
 
-    libraryVersion = ''
+bintray.libraryVersion=1.0.1
 
-    developerId = ''
-    developerName = ''
-    developerEmail = ''
+bintray.developerId=bourdakos1
+bintray.developerName=Nicholas Bourdakos
+bintray.developerEmail=bourdakos1@gmail.com
 
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
+bintray.licenseName=The Apache Software License, Version 2.0
+bintray.licenseUrl=http://www.apache.org/licenses/LICENSE-2.0.txt
+bintray.allLicenses=Apache-2.0
 ```
 
-Under your dependencies at the very end add:
+At the very end of your library module's build.gradle add:
 
 ```groovy
-apply plugin: 'com.github.dcendents.android-maven'
-
-group = publishedGroupId
-
-install {
-    repositories.mavenInstaller {
-        // This generates POM.xml with proper parameters
-        pom {
-            project {
-                packaging 'aar'
-                groupId publishedGroupId
-                artifactId artifact
-
-                name libraryName
-                description libraryDescription
-                url siteUrl
-
-                licenses {
-                    license {
-                        name licenseName
-                        url licenseUrl
-                    }
-                }
-                developers {
-                    developer {
-                        id developerId
-                        name developerName
-                        email developerEmail
-                    }
-                }
-            }
-        }
-    }
-}
-
-apply plugin: 'com.jfrog.bintray'
-
-version = libraryVersion
-
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
-}
-
-task javadoc(type: Javadoc) {
-    source = android.sourceSets.main.java.srcDirs
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-artifacts {
-    archives javadocJar
-    archives sourcesJar
-}
-
-// Bintray
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
-bintray {
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.apikey")
-
-    configurations = ['archives']
-    pkg {
-        repo = bintrayRepo
-        name = bintrayName
-        desc = libraryDescription
-        websiteUrl = siteUrl
-        vcsUrl = gitUrl
-        licenses = allLicenses
-        publish = true
-        publicDownloadNumbers = false
-        version {
-            desc = libraryDescription
-            gpg {
-                sign = false //Determines whether to GPG sign the files. The default is false
-                //passphrase = properties.getProperty("bintray.gpg.password")
-                //Optional. The passphrase for GPG signing'
-            }
-        }
-    }
-}
+apply from: 'https://raw.githubusercontent.com/bourdakos1/jCenter-Upload/master/jcenter-upload.gradle'
 ```
 
 Finally, in local.properties add the following:
-(replace "yourbintrayusername" and "yourbintrayapikey" with your actual info)
+
 ```groovy
 bintray.user=yourbintrayusername
 bintray.apikey=yourbintrayapikey
 ```
 
-To start the upload all you need to do is run ```./gradlew bintrayUpload``` in your projects terminal
+To start the upload do a gradle synce and run ```./gradlew bintrayUpload``` in your projects terminal
