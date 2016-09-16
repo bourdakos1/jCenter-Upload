@@ -16,7 +16,7 @@ dependencies {
 
 In your Project's gradle.properties add the following:
 
-```groovy
+```
 bintray.bintrayRepo=maven
 bintray.bintrayName=android-text-manager
 
