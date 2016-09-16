@@ -1,7 +1,7 @@
 # jCenter-Upload
 Step-by-step instructions for uploading to jCenter
 
-## Create a jCenter account
+## Create a Bintray account
 https://bintray.com
 
 ## Gradle
@@ -14,25 +14,32 @@ dependencies {
 }
 ```
 
+In the next step you will need to provide some information about your library. Some of this information includes your ``GroupId`` your ``artifact`` and your ``libraryVersion`` this is in regards to how users will add your library to their project and will look like what follows:
+```groovy
+dependencies {
+        compile 'publishedGroupId:artifact:libraryVersion'
+}
+```
+
 In your Project's gradle.properties add the following:
 ```properties
 bintray.bintrayRepo=maven
-bintray.bintrayName=android-text-manager
+bintray.bintrayName=your library's bintray name
 
-bintray.publishedGroupId=com.xlythe
-bintray.libraryName=AndroidTextManager
-bintray.artifact=android-text-manager
+bintray.publishedGroupId=your group id normally com.companyname
+bintray.libraryName=library name
+bintray.artifact=your desired artifact id
 
-bintray.libraryDescription=''
+bintray.libraryDescription=your library description
 
-bintray.siteUrl=https://github.com/Xlythe/AndroidTextManager
-bintray.gitUrl=https://github.com/Xlythe/AndroidTextManager.git
+bintray.siteUrl=your website url
+bintray.gitUrl=your git url
 
-bintray.libraryVersion=1.0.1
+bintray.libraryVersion=your library version eg 1.0.0
 
-bintray.developerId=bourdakos1
-bintray.developerName=Nicholas Bourdakos
-bintray.developerEmail=bourdakos1@gmail.com
+bintray.developerId=your id
+bintray.developerName=your name
+bintray.developerEmail=your email address
 
 bintray.licenseName=The Apache Software License, Version 2.0
 bintray.licenseUrl=http://www.apache.org/licenses/LICENSE-2.0.txt
@@ -40,16 +47,14 @@ bintray.allLicenses=Apache-2.0
 ```
 
 At the very end of your library module's build.gradle add:
-
 ```groovy
 apply from: 'https://raw.githubusercontent.com/bourdakos1/jCenter-Upload/master/upload.gradle'
 ```
 
 Finally, in local.properties add the following:
-
 ```properties
-bintray.user=yourbintrayusername
-bintray.apikey=yourbintrayapikey
+bintray.user=your bintray username
+bintray.apikey=your bintray apikey
 ```
 
 ## Upload
