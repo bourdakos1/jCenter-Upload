@@ -17,7 +17,8 @@ dependencies {
 In the next step you will need to provide some information about your library. Some of this information includes your ``GroupId`` your ``artifact`` and your ``libraryVersion`` they can be whatever you like, but normally look something like this:
 ```groovy
 dependencies {
-        compile 'publishedGroupId:artifact:libraryVersion'
+        compile 'com.xlythe:android-text-manager:1.0.0'
+                (GroupId:artifact:libraryVersion)
 }
 ```
 
@@ -26,16 +27,16 @@ In your Project's gradle.properties add the following:
 bintray.bintrayRepo=maven
 bintray.bintrayName=your library's bintray name
 
-bintray.publishedGroupId=your group id normally com.companyname
+bintray.publishedGroupId=your group id
 bintray.libraryName=library name
-bintray.artifact=your desired artifact id
+bintray.artifact=your desired artifact name
 
 bintray.libraryDescription=your library description
 
 bintray.siteUrl=your website url
 bintray.gitUrl=your git url
 
-bintray.libraryVersion=your library version eg 1.0.0
+bintray.libraryVersion=your library's version
 
 bintray.developerId=your id
 bintray.developerName=your name
