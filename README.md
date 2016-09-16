@@ -43,7 +43,7 @@ bintray.allLicenses=Apache-2.0
 At the very end of your library module's build.gradle add:
 
 ```groovy
-apply from: 'https://raw.githubusercontent.com/bourdakos1/jCenter-Upload/master/jcenter-upload.gradle'
+apply from: 'https://raw.githubusercontent.com/bourdakos1/jCenter-Upload/master/upload.gradle'
 ```
 
 Finally, in local.properties add the following:
