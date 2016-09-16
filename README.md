@@ -25,7 +25,7 @@ dependencies {
 In your Project's gradle.properties add the following:
 ```properties
 bintray.bintrayRepo=maven
-bintray.bintrayName=your library's bintray name
+bintray.bintrayName=your librarys bintray name
 
 bintray.publishedGroupId=your group id
 bintray.libraryName=library name
@@ -36,7 +36,7 @@ bintray.libraryDescription=your library description
 bintray.siteUrl=your website url
 bintray.gitUrl=your git url
 
-bintray.libraryVersion=your library's version
+bintray.libraryVersion=your librarys version
 
 bintray.developerId=your id
 bintray.developerName=your name
