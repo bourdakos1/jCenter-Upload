@@ -30,7 +30,7 @@ In your Project's gradle.properties add the following:
 bintray.libraryName=LibraryName
 
 bintray.groupId=your.group.id
-bintray.artifact=artifact-name *This must match your modules name*
+bintray.artifact=artifact-name //*This must match your modules name*
 bintray.libraryVersion=librarys.version
 
 bintray.libraryDescription=your library description
