@@ -12,6 +12,7 @@ In your Project's build.gradle make sure you have the following dependencies:
 dependencies {
         classpath 'com.android.tools.build:gradle:2.2.0'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7'
+        // This version is dependent on what version of gradle you are running
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
 }
 ```
