@@ -3,14 +3,14 @@ apply plugin: 'com.github.dcendents.android-maven'
 Properties projectProperties = new Properties()
 projectProperties.load(rootProject.file('gradle.properties').newDataInputStream())
 
-group = projectProperties.getProperty("bintray.publishedGroupId")
+group = projectProperties.getProperty("bintray.groupId")
 
 install {
     repositories.mavenInstaller {
         pom {
             project {
                 packaging 'aar'
-                groupId projectProperties.getProperty("bintray.publishedGroupId")
+                groupId projectProperties.getProperty("bintray.groupId")
                 artifactId projectProperties.getProperty("bintray.artifact")
 
                 name projectProperties.getProperty("bintray.libraryName")
@@ -81,8 +81,8 @@ bintray {
 
     configurations = ['archives']
     pkg {
-        repo = projectProperties.getProperty("bintray.bintrayRepo")
-        name = projectProperties.getProperty("bintray.bintrayName")
+        repo = "maven"
+        name = projectProperties.getProperty("bintray.artifact")
         desc = projectProperties.getProperty("bintray.libraryDescription")
         websiteUrl = projectProperties.getProperty("bintray.siteUrl")
         vcsUrl = projectProperties.getProperty("bintray.gitUrl")
