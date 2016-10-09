@@ -72,4 +72,5 @@ Click on it and then just click send. It will take a few hours before your libra
 
 ## Updating
 Make sure you bump your version number in your properties file.
+
 Run ```./gradlew bintrayUpload``` in your projects terminal.
