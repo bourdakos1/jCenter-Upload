@@ -26,9 +26,6 @@ dependencies {
 
 In your Project's gradle.properties add the following:
 ```properties
-bintray.bintrayRepo=maven
-bintray.bintrayName=your librarys bintray name
-
 bintray.publishedGroupId=your group id
 bintray.libraryName=library name
 bintray.artifact=artifact name *This must match your modules name*
