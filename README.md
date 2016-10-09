@@ -58,14 +58,18 @@ bintray.apikey=your bintray apikey
 ```
 
 ## Upload
-Run ```./gradlew bintrayUpload``` in your projects terminal
+Run ```./gradlew bintrayUpload``` in your projects terminal.
 
 ## Linking to jCenter
 This final step only needs to be completed the first time you upload your library.
 
 Login to your https://bintray.com account and click on your recently uploaded repository.
 
-On the bottom of the page you should see an add to JCenter button
+On the bottom of the page you should see an add to JCenter button:
 ![](help_button.png)
 
 Click on it and then just click send. It will take a few hours before your library is approved.
+
+## Updating
+Make sure you bump your version number in your properties file.
+Run ```./gradlew bintrayUpload``` in your projects terminal.
