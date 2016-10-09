@@ -71,7 +71,9 @@ if (!Os.isFamily(Os.FAMILY_WINDOWS)) {
 }
 
 artifacts {
-    archives javadocJar
+    if (!Os.isFamily(Os.FAMILY_WINDOWS)) {
+        archives javadocJar
+    }
     archives sourcesJar
 }
 
