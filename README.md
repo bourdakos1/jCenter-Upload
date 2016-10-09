@@ -20,22 +20,22 @@ In the next step you will need to provide some information about your library. S
 ```groovy
 dependencies {
         compile 'com.xlythe:android-text-manager:1.0.0'
-                (GroupId:artifact:libraryVersion)
+                (groupId:artifact:libraryVersion)
 }
 ```
 
 In your Project's gradle.properties add the following:
 ```properties
-bintray.publishedGroupId=your group id
-bintray.libraryName=library name
-bintray.artifact=artifact name *This must match your modules name*
+bintray.libraryName=LibraryName
+
+bintray.groupId=your.group.id
+bintray.artifact=artifact-name *This must match your modules name*
+bintray.libraryVersion=librarys.version
 
 bintray.libraryDescription=your library description
 
 bintray.siteUrl=your website url
 bintray.gitUrl=your git url
-
-bintray.libraryVersion=your librarys version
 
 bintray.developerId=your id
 bintray.developerName=your name
