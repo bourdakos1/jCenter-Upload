@@ -81,7 +81,7 @@ bintray {
 
     configurations = ['archives']
     pkg {
-        repo = maven
+        repo = 'maven'
         name = projectProperties.getProperty("bintray.artifact")
         desc = projectProperties.getProperty("bintray.libraryDescription")
         websiteUrl = projectProperties.getProperty("bintray.siteUrl")
