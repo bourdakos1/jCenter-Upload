@@ -1,4 +1,5 @@
 import org.apache.tools.ant.taskdefs.condition.Os;
+// I CNJSNKSKD SLKDLSK SKFP SLFP SPFL SPFL PS
 apply plugin: 'com.github.dcendents.android-maven'
 
 Properties projectProperties = new Properties()
