@@ -31,7 +31,7 @@ bintray.bintrayName=your librarys bintray name
 
 bintray.publishedGroupId=your group id
 bintray.libraryName=library name
-bintray.artifact=artifact name *This must match your module's name*
+bintray.artifact=artifact name *This must match your modules name*
 
 bintray.libraryDescription=your library description
 
